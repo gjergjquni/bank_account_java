@@ -32,4 +32,4 @@ An interactive class using `BankReader` to take user commands and execute transa
  
 ##  Clone this repository:  
    ```bash
-   git clone https://github.com/gjergjquni/your-repository.git
+   git clone https://github.com/gjergjquni/bank_account_java.git
