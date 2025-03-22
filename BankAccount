@@ -1,0 +1,52 @@
+
+import javax.swing.*;
+
+/** BankAccount menagjon një konto */
+public class BankAccount {
+    private int balance; // invariante: balance >= 0
+
+    /** Konstruktori
+     * @param amount - balansi inicial */
+    public BankAccount(int amount) {
+        if (amount >= 0) {
+            balance = amount;
+        } else {
+            balance = 0;
+        }
+    }
+
+    /** deposit deponon të holla në konto
+     * @param amount - sasia për deponim */
+    public boolean deposit(int amount) {
+        boolean result = false;
+        if (amount < 0) {
+            JOptionPane.showMessageDialog(null, "Gabim: depositi " + amount);
+        } else {
+            balance = balance + amount;
+            result = true;
+        }
+        return result;
+    }
+
+    /** withdraw tërheq të holla nga kontoja
+     * @param amount - sasia për tërheqje
+     * @return true nëse tërheqja e suksesshme, false përndryshe */
+    public boolean withdraw(int amount) {
+        boolean result = false;
+        if (amount < 0) {
+            JOptionPane.showMessageDialog(null, "Gabim: tërheqja " + amount);
+        } else if (amount > balance) {
+            JOptionPane.showMessageDialog(null, "Gabim: tërheqja tejkalon balansin");
+        } else {
+            balance = balance - amount;
+            result = true;
+        }
+        return result;
+    }
+
+    /** getBalance kthen balansin vijues
+     * @return balansi */
+    public int getBalance() {
+        return balance;
+    }
+}
