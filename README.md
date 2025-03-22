@@ -30,7 +30,6 @@ An interactive class using `BankReader` to take user commands and execute transa
 
 ---
  
-## ⚙️ How to Run the Code?  
-1. Clone this repository:  
+##  Clone this repository:  
    ```bash
    git clone https://github.com/gjergjquni/your-repository.git
