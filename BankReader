@@ -1,0 +1,38 @@
+package Bank;
+import javax.swing.*;
+
+/** BankReader lexon transakcione bankare */
+public class BankReader {
+    private String inputLine;
+
+    /** Konstruktori */
+    public BankReader() {
+        inputLine = "";
+    }
+
+    /** readCommand lexon linjë të re komanduese
+     * @param message - prompti për shfrytëzuesin
+     * @return karakterin e parë të komandës */
+    public char readCommand(String message) {
+        inputLine = JOptionPane.showInputDialog(message).trim().toUpperCase();
+        return inputLine.charAt(0);
+    }
+
+    /** readAmount kthen vlerën numerike nga linja komanduese
+     * @return vlera e konvertuar në cent */
+    public int readAmount() {
+        int answer = 0;
+        String s = inputLine.substring(1, inputLine.length()).trim();
+        if (s.length() > 0) {
+            try {
+                double money = Double.parseDouble(s);
+                answer = (int) (money * 100);
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "Gabim: vlerë e pavlefshme numerike");
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Gabim: transakcion pa vlerë");
+        }
+        return answer;
+    }
+}
