@@ -4,6 +4,6 @@ public class TestController {
         account.deposit(5000);
         account.withdraw(3000);
         int balance = account.getBalance();
-        System.out.println("Balansi: " + balance);
+        System.out.println("Balansi: " + balance); 
     }
 }
