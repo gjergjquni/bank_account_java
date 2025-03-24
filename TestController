@@ -1,0 +1,9 @@
+public class TestController {
+    public static void main(String[] args) {
+        BankAccount account = new BankAccount(0);
+        account.deposit(5000);
+        account.withdraw(3000);
+        int balance = account.getBalance();
+        System.out.println("Balansi: " + balance);
+    }
+}
