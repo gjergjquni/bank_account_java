@@ -1,7 +1,7 @@
 
 import javax.swing.*;
 
-/** BankAccount menagjon një konto */
+/** BankAccount menagjon një konto  */
 public class BankAccount {
     private int balance; // invariante: balance >= 0
 
