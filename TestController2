@@ -1,0 +1,28 @@
+
+import java.text.*;
+
+public class TestController2 {
+    public static void main(String[] args) {
+        BankReader reader = new BankReader();
+        BankAccount acc = new BankAccount(0);
+        char c = reader.readCommand("Komanda:");
+        switch (c) {
+            case 'Q':
+                break;
+            case 'D': {
+                int amount = reader.readAmount();
+                acc.deposit(amount);
+                break;
+            }
+            case 'T': {
+                int amount = reader.readAmount();
+                acc.withdraw(amount);
+                break;
+            }
+            default:
+                System.out.print("Gabim: komanda " + c);
+        }
+        double d = acc.getBalance() / 100.0;
+        System.out.println("Balanci: " + new DecimalFormat("0.00").format(d));
+    }
+}
