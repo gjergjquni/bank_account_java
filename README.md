@@ -5,7 +5,7 @@ This project is a **simple Java-based bank account management system** that allo
 ## **Project Overview**
 
 ### **1. `BankAccount.java`**
-Represents a bank account and handles core operations:  
+Represents a bank account and handles core operations:   
 - **Balance management**  
 - **Deposit** functionality  
 - **Withdrawal** functionality with error checking  
