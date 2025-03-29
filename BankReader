@@ -5,7 +5,7 @@ import javax.swing.*;
 public class BankReader {
     private String inputLine;
 
-    /** Konstruktori */
+    /** Konstruktori i kodit */
     public BankReader() {
         inputLine = "";
     }
