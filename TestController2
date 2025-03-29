@@ -7,7 +7,7 @@ public class TestController2 {
         BankAccount acc = new BankAccount(0);
         char c = reader.readCommand("Komanda:");
         switch (c) {
-            case 'Q':
+            case 'Q': 
                 break;
             case 'D': {
                 int amount = reader.readAmount();
