@@ -9,7 +9,7 @@ Represents a bank account and handles core operations:
 - **Balance management**  
 - **Deposit** functionality  
 - **Withdrawal** functionality with error checking  
-- **Displays** the current balance  
+- **Displays** the current balance   
 
 ### **2. `BankReader.java`**
 Responsible for reading commands and monetary amounts from the user:  
